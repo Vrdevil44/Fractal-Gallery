@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Art Gallery - Fractal Nexus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tron_cyberpunk.css">
+</head>
+<body>
+    <div class="grid-background"></div>
+    
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Initializing Mathematical Universe</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loading-bar"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="neon-text">Fractal Nexus</h1>
+            <div class="subtitle">Explore the beauty of mathematical patterns in an interactive experience</div>
+        </header>
+        
+        <main>
+            <div class="pattern-grid" id="pattern-grid">
+                <!-- Pattern cards will be generated here -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>Created with <span class="heart">♥</span> for mathematical beauty</p>
+        </footer>
+    </div>
+    
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Pattern Name</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="visualization-container" id="visualization-container">
+                    <!-- Three.js canvas will be inserted here -->
+                </div>
+                <div class="info-container">
+                    <div class="info-section about-section">
+                        <h3>About</h3>
+                        <p id="about-text">Description goes here...</p>
+                    </div>
+                    
+                    <div class="info-section math-section">
+                        <h3>Mathematical Significance</h3>
+                        <p id="math-text">Math details go here...</p>
+                    </div>
+                    
+                    <div class="info-section nature-section">
+                        <h3>Natural Occurrences</h3>
+                        <p id="nature-text">Nature details go here...</p>
+                    </div>
+                    
+                    <div class="info-section fact-section">
+                        <h3>Interesting Fact</h3>
+                        <p id="fact-text">Interesting fact goes here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span id="param1-label">Parameter 1</span>
+                        <span id="param1-value">50</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="param1">
+                </div>
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span id="param2-label">Parameter 2</span>
+                        <span id="param2-value">50</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="param2">
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-reset" id="reset-btn">Reset</button>
+                    <button class="btn" id="randomize-btn">Randomize</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add cyber lines for Tron effect -->
+    <div class="cyber-line cyber-line-horizontal cyber-line-top"></div>
+    <div class="cyber-line cyber-line-horizontal cyber-line-bottom"></div>
+    <div class="cyber-line cyber-line-vertical cyber-line-left"></div>
+    <div class="cyber-line cyber-line-vertical cyber-line-right"></div>
+    
+    <!-- Add glow effects -->
+    <div class="glow-effect glow-primary" style="top: 20%; left: 10%; width: 300px; height: 300px;"></div>
+    <div class="glow-effect glow-secondary" style="bottom: 30%; right: 15%; width: 400px; height: 400px;"></div>
+    <div class="glow-effect glow-accent" style="top: 60%; left: 50%; width: 250px; height: 250px;"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="js/patterns_data.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+// Pattern data for Mathematical Art Gallery
+const patterns = [
+    {
+        id: 'clifford',
+        name: 'Clifford Strange Attractor',
+        description: 'A hypnotic fractal pattern formed by iterating chaotic equations.',
+        about: 'The Clifford Attractor is a type of strange attractor — a structure in phase space that emerges from simple chaotic equations. Despite its simplicity, it produces intricate, almost alien visuals.',
+        mathSignificance: 'The Clifford Attractor shows how non-linear dynamical systems can exhibit stable but non-repeating behavior. It’s an example of deterministic chaos: perfectly predictable, yet never repeating.',
+        naturalOccurrences: 'Chaotic attractors like Clifford’s appear in weather systems, brainwaves, orbits, population models, and fluid dynamics.',
+        interestingFact: 'Small changes in parameters like a, b, c, d can create completely different structures. It’s often used in generative art and data visualization due to its infinite variety.',
+        color: '#ff9900',
+        paramLabel1: 'Attractor Intensity',
+        paramLabel2: 'Chaos Spread'
+    },    
+    {
+    id: 'hypercube',
+    name: '4D Hypercube (Tesseract)',
+    description: 'A 4D cube visualized in 3D space, rotating continuously in higher dimensions.',
+    about: 'The tesseract, or 4D hypercube, is the four-dimensional analog of a cube. While it cannot be visualized directly in our 3D world, we can project its 16 vertices and 32 edges into 3D space to observe its structure and rotation.',
+    mathSignificance: 'The tesseract consists of 8 cubes connected in 4D space. It is part of the family of hypercubes, which are generalizations of cubes into higher dimensions. In mathematics and theoretical physics, it helps in understanding higher-dimensional geometry and space-time theories.',
+    naturalOccurrences: 'Although 4D objects cannot occur naturally in physical space, concepts of 4D are important in relativity, string theory, and higher-dimensional simulations in physics and computer graphics.',
+    interestingFact: 'The tesseract appears in popular culture, including Marvel movies and sci-fi literature. Its rotations are used to model higher-dimensional transformations and can even help visualize quantum phenomena.',
+    color:'#e46161',
+    paramLabel1: 'XW Rotation',
+    paramLabel2: 'ZW Rotation'
+    },
+    {
+        id: 'fibonacci',
+        name: 'Fibonacci Spiral & Golden Ratio',
+        description: 'A sequence where each number is the sum of the two preceding ones, creating a spiral with divine proportions.',
+        about: 'The Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, 34...) creates a spiral that approximates the golden ratio (φ ≈ 1.618), considered one of nature\'s most aesthetically pleasing proportions.',
+        mathSignificance: 'The ratio of consecutive Fibonacci numbers converges to the golden ratio (φ), which is the positive solution to the quadratic equation x² - x - 1 = 0. This irrational number (approximately 1.618033988749895) has unique mathematical properties and appears in various mathematical contexts.',
+        naturalOccurrences: 'Fibonacci spirals appear throughout nature: in the arrangement of seeds in sunflowers, the pattern of scales on pinecones, the family tree of honeybees, and the spiral of galaxies. The golden ratio is found in the proportions of the human body, nautilus shells, and the branching patterns of trees.',
+        interestingFact: 'The Fibonacci sequence was originally introduced to Western mathematics in 1202 by Leonardo of Pisa (Fibonacci) as a solution to a problem about rabbit population growth. The golden ratio was known to the ancient Greeks and was used in the design of the Parthenon.',
+        color: '#00FFFF',
+        paramLabel1: 'Spiral Density',
+        paramLabel2: 'Rotation Speed'
+    },
+    {
+        id: 'mandelbrot',
+        name: 'Mandelbrot Set',
+        description: 'An intricate fractal set with an infinitely complex boundary that reveals endless self-similar patterns.',
+        about: 'The Mandelbrot set is one of the most famous fractals, defined by a simple recursive equation z = z² + c, where z and c are complex numbers. Despite its mathematical simplicity, it generates infinitely complex patterns.',
+        mathSignificance: 'The Mandelbrot set is defined as the set of complex numbers c for which the function f(z) = z² + c does not diverge when iterated from z = 0. It demonstrates how complex patterns can emerge from simple rules and is a cornerstone of chaos theory and complex dynamics.',
+        naturalOccurrences: 'While the exact Mandelbrot set doesn\'t appear in nature, similar fractal patterns are found in coastlines, mountain ranges, cloud formations, and river networks. Fractal-like structures also appear in biological systems like fern leaves, cauliflower, and blood vessel networks.',
+        interestingFact: 'Although the mathematics behind the Mandelbrot set had been studied earlier, it wasn\'t until the advent of computer graphics in the 1980s that its visual beauty was fully appreciated. Benoit Mandelbrot, after whom the set is named, coined the term "fractal" to describe these infinitely complex patterns.',
+        color: '#FF00FF',
+        paramLabel1: 'Zoom Level',
+        paramLabel2: 'Color Shift'
+    },
+    {
+        id: 'lorenz',
+        name: 'Butterfly Effect & Strange Attractors',
+        description: 'A chaotic system where tiny changes in initial conditions lead to vastly different outcomes.',
+        about: 'The Lorenz attractor, discovered by meteorologist Edward Lorenz, demonstrates the butterfly effect—the concept that small changes in initial conditions can lead to vastly different outcomes in chaotic systems.',
+        mathSignificance: 'The Lorenz system is a set of three ordinary differential equations that exhibit chaotic flow. It was one of the first examples of deterministic chaos, showing that deterministic systems can be unpredictable due to their sensitivity to initial conditions.',
+        naturalOccurrences: 'The butterfly effect is most famously associated with weather patterns, where small perturbations can dramatically alter forecasts. Similar chaotic dynamics appear in turbulent fluid flows, population dynamics in ecosystems, and even the irregular beating of a human heart.',
+        interestingFact: 'The term "butterfly effect" comes from the title of Lorenz\'s 1972 paper: "Does the flap of a butterfly\'s wings in Brazil set off a tornado in Texas?" The Lorenz attractor, when plotted, resembles a butterfly\'s wings, making this metaphor particularly apt.',
+        color: '#39FF14',
+        paramLabel1: 'System Sensitivity',
+        paramLabel2: 'Animation Speed'
+    },
+    {
+        id: 'voronoi',
+        name: 'Voronoi Diagrams',
+        description: 'A partitioning of space into regions based on distance to a specific set of points.',
+        about: 'Voronoi diagrams divide space into regions where each point in a region is closer to its seed point than to any other seed point. They create natural-looking cellular structures that efficiently partition space.',
+        mathSignificance: 'Voronoi diagrams have applications in computational geometry, optimization problems, and nearest neighbor searches. They are dual to Delaunay triangulations and have connections to convex hulls and minimum spanning trees.',
+        naturalOccurrences: 'Voronoi patterns appear in cell structures of living tissues, the spots on a giraffe, dried mud cracks, and the large-scale structure of the universe where galaxies form in a cosmic web. They also appear in the growth patterns of forest canopies.',
+        interestingFact: 'Voronoi diagrams are named after Ukrainian mathematician Georgy Voronoy, but similar concepts were studied earlier by Descartes and Dirichlet. They\'re used in many practical applications from mobile phone tower placement to generating realistic textures in computer graphics.',
+        color: '#FF6600',
+        paramLabel1: 'Cell Count',
+        paramLabel2: 'Animation Speed'
+    },
+    {
+        id: 'penrose',
+        name: 'Penrose Tilings',
+        description: 'Non-repeating patterns that tile the plane with pentagonal symmetry, creating aperiodic designs.',
+        about: 'Penrose tilings, discovered by mathematician and physicist Roger Penrose, are aperiodic tilings that cover a plane without repeating patterns. They exhibit fivefold symmetry that was once thought impossible in a complete tiling.',
+        mathSignificance: 'Penrose tilings demonstrate that it\'s possible to tile a plane non-periodically with just two shapes. They have connections to quasicrystals, golden ratio, and Fibonacci numbers. The tilings exhibit self-similarity and long-range order without periodicity.',
+        naturalOccurrences: 'In 1982, quasicrystals were discovered with five-fold symmetry similar to Penrose tilings, contradicting the previously held belief that crystals could only have 2, 3, 4, or 6-fold symmetry. These structures have been found in certain metal alloys.',
+        interestingFact: 'Penrose tilings were used in architectural designs and even on toilet paper where the pattern was guaranteed not to repeat. Roger Penrose actually patented his tilings, and when the toilet paper company used them without permission, he successfully sued for copyright infringement.',
+        color: '#9D00FF',
+        paramLabel1: 'Tile Size',
+        paramLabel2: 'Rotation Speed'
+    },
+    {
+        id: 'platonic',
+        name: 'Platonic Solids',
+        description: 'The five perfect 3D shapes with identical faces, vertices, and angles.',
+        about: 'Platonic solids are the five regular polyhedra: tetrahedron (4 faces), cube (6 faces), octahedron (8 faces), dodecahedron (12 faces), and icosahedron (20 faces). They are perfectly symmetrical 3D shapes with identical faces, vertices, and angles.',
+        mathSignificance: 'Platonic solids represent the only five possible regular polyhedra in 3D space. They have profound connections to group theory, crystallography, and are related to the classification of finite simple groups. Each solid has a dual Platonic solid.',
+        naturalOccurrences: 'Many crystals form in shapes related to Platonic solids. The octahedral and tetrahedral structures appear in molecular geometry. Some viruses, like the adenovirus, have icosahedral symmetry. Pyrite crystals naturally form in cubic shapes.',
+        interestingFact: 'The ancient Greeks associated each Platonic solid with a classical element: tetrahedron (fire), cube (earth), octahedron (air), icosahedron (water), and dodecahedron (the universe or ether). Johannes Kepler once proposed a model of the solar system based on nested Platonic solids.',
+        color: '#FFFF00',
+        paramLabel1: 'Solid Type',
+        paramLabel2: 'Rotation Speed'
+    },
+    {
+        id: 'wave',
+        name: 'Wave Interference Patterns',
+        description: 'The superposition of waves creating constructive and destructive interference patterns.',
+        about: 'Wave interference occurs when two or more waves overlap, creating a pattern of reinforcement (constructive interference) and cancellation (destructive interference). These patterns reveal the fundamental wave nature of many physical phenomena.',
+        mathSignificance: 'Wave interference is described by the principle of superposition, where the displacement at any point is the sum of the displacements of the individual waves. This principle is fundamental to understanding wave mechanics, quantum physics, and optics.',
+        naturalOccurrences: 'Interference patterns can be observed in ripples on water surfaces, in the iridescent colors of soap bubbles and oil slicks, and in the acoustic properties of concert halls. Light interference creates the colorful patterns seen in peacock feathers and butterfly wings.',
+        interestingFact: 'Thomas Young\'s famous double-slit experiment in 1801 demonstrated light interference, providing crucial evidence that light behaves as a wave. Later, the same experiment with electrons showed that particles also exhibit wave-like properties, helping establish quantum mechanics.',
+        color: '#00FFFF',
+        paramLabel1: 'Wave Frequency',
+        paramLabel2: 'Amplitude'
+    },
+    {
+        id: 'turing',
+        name: 'Reaction-Diffusion Systems',
+        description: 'Chemical processes that create spontaneous pattern formation through simple rules.',
+        about: 'Reaction-diffusion systems, first proposed by Alan Turing in 1952, describe how chemicals react and diffuse to create spontaneous pattern formation. These systems demonstrate how complex patterns can emerge from simple local interactions.',
+        mathSignificance: 'Mathematically described by coupled partial differential equations, reaction-diffusion systems exhibit pattern formation through the interplay of activation and inhibition processes. They demonstrate how symmetry breaking can lead to spatial organization without external direction.',
+        naturalOccurrences: 'Reaction-diffusion mechanisms are believed to be responsible for many biological patterns: the spots and stripes on animal coats (like zebras and leopards), the arrangement of hair follicles, the patterns on seashells, and even the formation of fingerprints.',
+        interestingFact: 'Alan Turing, better known for his work in computer science and breaking the Enigma code during World War II, published "The Chemical Basis of Morphogenesis" in 1952, laying the foundation for understanding biological pattern formation through mathematics.',
+        color: '#FF00FF',
+        paramLabel1: 'Reaction Rate',
+        paramLabel2: 'Diffusion Rate'
+    },
+    {
+        id: 'lissajous',
+        name: 'Lissajous Curves',
+        description: 'Elegant curves created by combining two perpendicular harmonic oscillations.',
+        about: 'Lissajous curves (or Bowditch curves) are the visual representation of complex harmonic motion. They\'re created by combining two perpendicular oscillations with different frequencies, resulting in beautiful, intricate patterns.',
+        mathSignificance: 'Lissajous curves are parametric equations of the form x = A sin(at + δ), y = B sin(bt), where the ratio a/b determines the complexity of the pattern. They illustrate principles of harmonic motion, frequency relationships, and phase differences.',
+        naturalOccurrences: 'While perfect Lissajous curves are mathematical idealizations, similar patterns appear in pendulum harmonographs, oscilloscope readings, and in the study of coupled oscillators. The orbits of certain binary star systems can approximate Lissajous-like patterns.',
+        interestingFact: 'Before digital displays, Lissajous patterns were used to compare frequencies in audio engineering. The NBC logo was inspired by a Lissajous curve with a frequency ratio of 3:2. Jules Antoine Lissajous first studied these curves using mirrors attached to tuning forks.',
+        color: '#39FF14',
+        paramLabel1: 'Frequency Ratio',
+        paramLabel2: 'Phase Shift'
+    },
+    {
+        id: 'hyperbolic',
+        name: 'Hyperbolic Geometry',
+        description: 'A non-Euclidean geometry where parallel lines diverge and the sum of angles in a triangle is less than 180°.',
+        about: 'Hyperbolic geometry is a non-Euclidean geometry where Euclid\'s parallel postulate is replaced with the assertion that through a point not on a given line, there are at least two lines parallel to the given line. This creates a geometry with negative curvature.',
+        mathSignificance: 'Hyperbolic geometry revolutionized mathematics by showing that consistent geometries could exist that don\'t follow Euclidean principles. It has connections to differential geometry, topology, and has applications in Einstein\'s theory of general relativity.',
+        naturalOccurrences: 'Hyperbolic-like structures appear in certain corals, kelps, and lettuce leaves where the growing edge increases exponentially compared to the supporting structure. The saddle shape, a surface with negative curvature, is found in certain mountain passes and potato chips.',
+        interestingFact: 'Artist M.C. Escher\'s "Circle Limit" series of woodcuts illustrates hyperbolic geometry using the Poincaré disk model. Hyperbolic crochet models created by mathematician Daina Taimina have helped make this abstract geometry tangible and have been displayed in art museums.',
+        color: '#FF6600',
+        paramLabel1: 'Curvature',
+        paramLabel2: 'Tessellation Density'
+    }
+];
