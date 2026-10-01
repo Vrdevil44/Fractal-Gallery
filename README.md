@@ -1,15 +1,17 @@
 # Fractal Nexus - Mathematical Art Gallery
 
 <div align="center">
-  <img src="/image.png" alt="Fractal Nexus Banner" width="100%">
-  <img src="/image1.png" alt="Modal" width="100%">
-  <img src="/image2.png" alt="Loading Screen" width="100%">
+  <img src="./image.png" alt="Fractal Nexus Banner" width="100%">
+  <img src="./image1.png" alt="Modal" width="100%">
+  <img src="./image2.png" alt="Loading Screen" width="100%">
 </div>
 
 > An interactive mathematical art gallery featuring dynamic visualizations with a cyberpunk/Tron aesthetic.
+>
+> **Live demo:** https://vrdevil44.github.io/Fractal-Gallery/
 
-[![GitHub license](https://img.shields.io/github/license/Vrdevil44/fractal-nexus)](https://github.com/Vrdevil44/fractal-nexus/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/Vrdevil44/fractal-nexus)](https://github.com/Vrdevil44/fractal-nexus/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Vrdevil44/Fractal-Gallery)](https://github.com/Vrdevil44/Fractal-Gallery/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Vrdevil44/Fractal-Gallery)](https://github.com/Vrdevil44/Fractal-Gallery/stargazers)
 
 ## 🌟 Features
 
@@ -47,12 +49,12 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Vrdevil44/fractal-nexus.git
+git clone https://github.com/Vrdevil44/Fractal-Gallery.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd fractal-nexus
+cd Fractal-Gallery
 ```
 
 3. Open `index.html` in your browser or use a local server:
